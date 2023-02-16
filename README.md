@@ -25,6 +25,18 @@ npm run build
 npm start
 ```
 
+#### Code usage
+
+```javascript
+import HorseRacingAuth from "./src/horseRacingAuth";
+
+const auth = new HorseRacingAuth(FB_CONFIG);
+
+const credential = auth.generateCredentials(email, password);
+
+const token = { Authorization: `Bearer ${credential.idToken}` };
+```
+
 DOCKER -> use the DockerFile to build a docker image
 
 ## More Info ℹ️
